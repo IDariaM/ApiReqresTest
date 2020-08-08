@@ -30,4 +30,8 @@ public class Specification {
         RestAssured.requestSpecification = requestSpec;
 
     }
+    public static void clearSpec(){
+        RestAssured.requestSpecification = null;
+        RestAssured.responseSpecification = null;
+    }
 }

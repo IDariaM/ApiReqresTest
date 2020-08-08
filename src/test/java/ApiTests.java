@@ -21,6 +21,7 @@ public class ApiTests {
         }};
 
         ApiSteps.checkPics(expectedResults);
+        Specification.clearSpec();
 
     }
 
@@ -32,6 +33,7 @@ public class ApiTests {
         data.put("password","pistol");
         Specification.installSpec(Specification.requestSpec(),Specification.responseSpec());
         ApiSteps.userRegistration(data);
+        Specification.clearSpec();
     }
 
     @Test
@@ -42,6 +44,7 @@ public class ApiTests {
         data.put("password","cityslicka");
         Specification.installSpec(Specification.requestSpec(),Specification.responseSpec());
         ApiSteps.successfulLogin(data);
+        Specification.clearSpec();
     }
 
     @Test
@@ -52,6 +55,7 @@ public class ApiTests {
         data.put("password","");
         Specification.installSpec(Specification.requestSpec());
         ApiSteps.unsuccessfulLogin(data);
+        Specification.clearSpec();
     }
 
     @Test
@@ -59,6 +63,7 @@ public class ApiTests {
     public void checkDataSorting () {
         Specification.installSpec(Specification.requestSpec(), Specification.responseSpec());
         ApiSteps.checkDataSorting();
+        Specification.clearSpec();
     }
 
     }
